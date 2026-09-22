@@ -1,0 +1,21 @@
+title: Henry Chung
+description: Apps I build — privacy policies and support.
+url: "https://henrychung98.github.io"
+baseurl: ""   # user site: served from the domain root
+lang: en
+encoding: utf-8
+
+collections:
+  apps:
+    output: true
+    permalink: /:path/   # _apps/ex-rate.md -> /ex-rate/, _apps/ex-rate/policy.md -> /ex-rate/policy/
+
+defaults:
+  - scope: { type: apps }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

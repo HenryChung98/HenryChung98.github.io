@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<nav><a href="{{ '/' | relative_url }}">← All apps</a></nav>
+<h1>{{ page.title }}</h1>
+{% if page.description %}<p class="muted">{{ page.description }}</p>{% endif %}
+{{ content }}
+
+{% comment %} Every doc under this app's URL, e.g. /ex-rate/policy/ and /ex-rate/support/ {% endcomment %}
+{% assign pages = site.apps | where_exp: "d", "d.url != page.url" | where_exp: "d", "d.url contains page.url" | sort: "order" %}
+<ul class="cards">
+{% for item in pages %}
+  <li><a href="{{ item.url | relative_url }}">{{ item.nav_title | default: item.title }}</a></li>
+{% endfor %}
+</ul>

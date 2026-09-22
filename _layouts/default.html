@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 760px; margin: 0 auto; padding: 2rem 1rem 4rem;
+           font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: #2f6fdf; }
+    h1 { line-height: 1.25; }
+    table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+    th, td { border: 1px solid #8884; padding: .4rem .6rem; text-align: left; }
+    code { background: #8882; padding: .1rem .3rem; border-radius: 4px; }
+    .muted { opacity: .65; font-size: .9em; }
+    nav { margin-bottom: 1.5rem; }
+    ul.cards { list-style: none; padding: 0; }
+    ul.cards li { border: 1px solid #8884; border-radius: 8px; margin: .6rem 0; }
+    ul.cards li a { display: block; padding: .8rem 1rem; text-decoration: none; }
+    ul.cards li a:hover { background: #8881; }
+    ul.cards .muted { display: block; color: inherit; }
+  </style>
+</head>
+<body>
+{{ content }}
+</body>
+</html>
+
+
+<!-- bundle exec jekyll serve -->
